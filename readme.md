@@ -39,12 +39,12 @@ python main.py -sd
 # Notes
 - The sleep time (time.sleep) can be adjusted as needed to match your preferred typing speed. But, by default:
     - Pc:
-      DEFAULT_TIEMPO_ENTRE_PALABRA = 3
-      DEFAULT_TIEMPO_ENTRE_LETRA = 0.08
+      - DEFAULT_TIEMPO_ENTRE_PALABRA = 3
+      - DEFAULT_TIEMPO_ENTRE_LETRA = 0.08
     - Cellphone:
-      DEFAULT_TIEMPO_ENTRE_PALABRA = 4
-      DEFAULT_TIEMPO_ENTRE_LETRA = 0.08
-      (Plus other 1.7 seconds to click the screen)
+      - DEFAULT_TIEMPO_ENTRE_PALABRA = 4
+      - DEFAULT_TIEMPO_ENTRE_LETRA = 0.08
+      - (Plus other 1.7 seconds to click the screen)
 - Ensure the window where you want the words to be typed is active when the script starts running.
 - The shutdown feature is only compatible with Windows.
 
