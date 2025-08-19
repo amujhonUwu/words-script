@@ -19,14 +19,16 @@ DEFAULT_TIEMPO_ENTRE_LETRA = 0.08
 # Función principal para lanzar palabras
 def lanzar_palabras(tiempo_entre_letra, tiempo_entre_palabra, celular=False):
     """
-    Función que escribe palabras de una lista en un campo de texto,
-    con la opción de simular clics si se ejecuta en un celular.
+    Función que escribe palabras de una lista en un campo de texto.
     """
+    if celular:
+        print("Hemos deshabilitado temporalmente el modo de celular.")
+
+
     for palabra in lista:
         palabra = " " + palabra + " " + random.choice(lista)
-
-        if celular:
-            pyautogui.click(1700, 119)
+        pyautogui.hotkey('ctrl', 'e')
+        time.sleep(0.3)  # Espera para asegurar que el campo de texto esté listo
 
         for letra in palabra:
             pyautogui.press(letra)
@@ -34,12 +36,7 @@ def lanzar_palabras(tiempo_entre_letra, tiempo_entre_palabra, celular=False):
 
         pyautogui.press('enter')
         time.sleep(tiempo_entre_palabra)
-
-        if celular:
-            pyautogui.click(1700, 119)
-            time.sleep(1.2)
-            pyautogui.click(1855, 119)
-            time.sleep(0.5)
+    
 
 # Argumentos del script
 parser = argparse.ArgumentParser(description="Script para escribir palabras y opcionalmente apagar la PC")

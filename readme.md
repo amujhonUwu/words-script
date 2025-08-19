@@ -13,20 +13,33 @@ You can install the `pyautogui` library using `pip`:
 pip install pyautogui
 ```
 
-# How to Use
-1. Make sure the required dependencies are installed.
-2. Run the Python script with or without the shutdown option.
+## How to Use
+
+### Windows (quick start)
+1. Install the dependeces:
+  ```bash 
+  pip install -r requirements.txt
+  ```
+2. Run the Python script:
+
+#### Normal
+
+  ```bash 
+  python main.py
+  ```
+
+#### With shutdown option
+
+  ```bash 
+  python main.py -sd
+  ```
+
 3. After a 3-second delay (to allow you to select the desired window), the script will begin typing each word in the list.
-4. The script will press "Enter" after typing each word.
 
 # Args
 Use no arguments to run only on pc.
 
--cell: This will execute the script to a cellphone. But, you have to:
-  1. Have an app like "Bluestacks" or a duplicated screen of your mobile
-  2. The cell phone screen should be in the upper right corner of your computer screen
-     
--all: This will run both, first the PC and then the cell phone
+**Note:** The cellphone mode (`-cell` and `-all` arguments) is currently disabled.
 
 
 ## Optional Shutdown
